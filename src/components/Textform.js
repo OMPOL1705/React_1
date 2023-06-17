@@ -24,7 +24,22 @@ export default function Textform() {
     let newtext = text.replaceAll(/ /g, "");
     setText(newtext);
   };
+
+  const cap = () => {
+    let newtext = text.replace(
+      /(^|[.!?]\s+)([a-z])/g,
+      (match, punctuation, letter) => {
+        return punctuation + letter.toUpperCase();
+      }
+    );
+    setText(newtext);
+  };
+
+  
+
   const [text, setText] = useState("");
+
+  const [search, setSearch] = useState("");
 
   return (
     <>
@@ -51,6 +66,9 @@ export default function Textform() {
       </button>
       <button type="button" onClick={space} className="btn btn-primary mx-3">
         Space Remover
+      </button>
+      <button type="button" onClick={cap} className="btn btn-primary mx-3 my-3">
+        Capitalize sentence
       </button>
       <div className="container my-3">
         <h2>Summary of data</h2>
