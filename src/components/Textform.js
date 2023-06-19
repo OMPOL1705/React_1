@@ -35,6 +35,8 @@ export default function Textform(props) {
     setText(newtext);
   };
 
+  
+
   const [text, setText] = useState("");
 
   return (
@@ -117,9 +119,23 @@ export default function Textform(props) {
         >
           Capitalize sentence
         </button>
+        <button
+          type="button"
+          onClick={()=>{props.onToggle("primary")}}
+          className="btn btn-primary mx-3 my-3"
+        >
+          Blue
+        </button>
+        <button
+          type="button"
+          onClick={()=>{props.onToggle("danger")}}
+          className="btn btn-danger mx-3 my-3"
+        >
+          Red
+        </button>
         <div className="cont my-1">
           <h2>Summary of data</h2>
-          <p>{(text.split(" ").length+1>0)?(text.split(" ").length-1):0} words</p>
+          <p>{(text.split(" ").length)} words</p>
           <p>{text.length + 1 - text.split(" ").length} charcters</p>
           <h2>Preview</h2>
           <p>{text.length>0 ? text:"Enter something"}</p>

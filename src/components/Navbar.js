@@ -40,7 +40,7 @@ export default function Navbar(props) {
                 className="form-check-input"
                 type="checkbox"
                 value=""
-                onClick={props.onToggle}
+                onClick={()=>{props.onToggle("null")}}
                 id="defaultCheck1"
               />
               <label className="form-check-label light" htmlFor="defaultCheck1">

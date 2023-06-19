@@ -7,7 +7,16 @@ function App() {
 
   const[mode,setMode] = useState('light');
 
-  const onToggle = () => {
+  const removeBodyClasses = () => {
+    document.body.classList.remove('bg-primary');
+    document.body.classList.remove('bg-danger');
+    document.body.classList.remove('bg-light');
+    document.body.classList.remove('bg-dark');
+  }
+
+  const onToggle = (cls) => {
+    removeBodyClasses(); 
+    document.body.classList.add('bg-'+cls);
     if(mode==='light'){
       setMode('dark');
       document.body.style.backgroundColor = 'black';
@@ -18,11 +27,13 @@ function App() {
     
   }
 
+  
+
   return (
     <>
     <Navbar mode={mode} onToggle={onToggle}/>
     <div className="container my-3">
-    <Textform head="Enter" mode={mode}/>
+    <Textform head="Enter" mode={mode} onToggle={onToggle}/>
 
     </div>
     </>
