@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import './App.css';
 import Navbar from './components/Navbar';
-import Textform from './components/Textform';
+import About from './components/About';
+// import Textform from './components/Textform';
 
 function App() {
 
@@ -27,15 +28,18 @@ function App() {
     
   }
 
+
+
   
 
   return (
     <>
     <Navbar mode={mode} onToggle={onToggle}/>
-    <div className="container my-3">
+    <About mode={mode} onToggle={onToggle}/>
+    {/* <div className="container my-3">
     <Textform head="Enter" mode={mode} onToggle={onToggle}/>
 
-    </div>
+    </div> */}
     </>
   );
 }
