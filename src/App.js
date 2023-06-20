@@ -2,7 +2,13 @@ import { useState } from 'react';
 import './App.css';
 import Navbar from './components/Navbar';
 import About from './components/About';
-// import Textform from './components/Textform';
+import Textform from './components/Textform';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route
+} from 'react-router-dom';
+
 
 function App() {
 
@@ -34,12 +40,19 @@ function App() {
 
   return (
     <>
+    <Router>
     <Navbar mode={mode} onToggle={onToggle}/>
-    <About mode={mode} onToggle={onToggle}/>
-    {/* <div className="container my-3">
-    <Textform head="Enter" mode={mode} onToggle={onToggle}/>
-
-    </div> */}
+    <div className="container my-3">
+    <Routes>
+          <Route exact path="/"
+          element={<Textform head="Enter" mode={mode} onToggle={onToggle}/>}
+          />
+          <Route exact path="/about"
+          element={<About mode={mode} onToggle={onToggle}/>}
+          />
+          </Routes>
+    </div>
+    </Router>
     </>
   );
 }

@@ -135,7 +135,7 @@ export default function Textform(props) {
         </button>
         <div className="cont my-1">
           <h2>Summary of data</h2>
-          <p>{(text.split(" ").length)} words</p>
+          <p>{(text.split(" ").filter((element)=>{return element.length!==0;}).length)} words</p>
           <p>{text.length + 1 - text.split(" ").length} charcters</p>
           <h2>Preview</h2>
           <p>{text.length>0 ? text:"Enter something"}</p>
