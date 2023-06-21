@@ -7,9 +7,10 @@ export default function About(props) {
         <div className="card" style={{
         backgroundColor: props.mode === "dark" ? "grey" : "white",
         color: props.mode === "dark" ? "white" : "black",
-        border: '1px solid white'
+        border: '1px solid',
+        borderColor: props.mode === "dark" ? "white" : "black"
       }}>
-          <div className="card-header" id="headingOne" style={{border:'1px solid white'}}>
+          <div className="card-header" id="headingOne">
             <h5 className="mb-0">
               <button
                 style={{color: props.mode === "dark" ? "white" : "black"}}
@@ -49,9 +50,10 @@ export default function About(props) {
         <div className="card"  style={{
         backgroundColor: props.mode === "dark" ? "grey" : "white",
         color: props.mode === "dark" ? "white" : "black",
-        border: '1px solid white'
+        border: '1px solid',
+        borderColor: props.mode === "dark" ? "white" : "black"
       }}>
-          <div className="card-header" id="headingTwo" style={{border:'1px solid white'}}>
+          <div className="card-header" id="headingTwo">
             <h5 className="mb-0">
               <button
                 style={{color: props.mode === "dark" ? "white" : "black"}}
@@ -89,9 +91,10 @@ export default function About(props) {
         <div className="card"  style={{
         backgroundColor: props.mode === "dark" ? "grey" : "white",
         color: props.mode === "dark" ? "white" : "black",
-        border: '1px solid white'
+        border: '1px solid',
+        borderColor: props.mode === "dark" ? "white" : "black"
       }}>
-          <div className="card-header" id="headingThree" style={{border:'1px solid white'}}>
+          <div className="card-header" id="headingThree">
             <h5 className="mb-0">
               <button
                 style={{color: props.mode === "dark" ? "white" : "black"}}
